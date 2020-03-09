@@ -1,0 +1,24 @@
+.main-chat
+  .main-chat_group-info
+    .main-chat_group-info_test
+      test
+      .main-chat_group-info_test_menber
+        Menber: masa
+    .main-chat_group-info_edit
+      = link_to "#" do
+        Edit
+  .main-chat__space
+    .main-chat__space__box
+      .main-chat__space__box__name
+        masa
+      .main-chat__space__box__day
+
+    .main-chat__space__hello
+      おはよう！
+  .main-chat__message-form
+    .main-chat__message-form__box
+      %input.placeholder{:placeholder=>"type a message", :class=>"main-chat__message-form__box__text" }
+      %label{class: "main-chat__message-form__box__icon"}
+        = icon('fas','image')
+        %input{type: "file", class:"main-chat__message-form__box__icon__file"}
+    %input{:type=>"submit", :name=>"commit", :class=>"main-chat__message-form__send"}
