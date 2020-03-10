@@ -2,20 +2,24 @@
   .side-bar_user-name
     .side-bar_user-name_top-items
       .side-bar_user-name_top-items__name
-        %p aaaa
+        = current_user.name
       %ul.side-bar_user-name_top-items__icon
         %li<
         .side-bar_user-name_top-items__icon__edit
-        = link_to "#" do
+        = link_to new_group_path do
           %i.far.fa-edit
           
         %li<
         .side-bar_user-name_top-items__icon__config
-        = link_to "#" do
-          %i.fas.fa-cog
-  .side-bar_group-box
-    .side-bar_group-box_name
-      techchamp
-    .side-bar_group-box_message
-      まだメッセージはありません
+        = link_to edit_user_path(current_user) do
+          = icon('fas', 'cog', class: 'icon')
+  .side-bar__groups
+    - current_user.groups.each do |group|
+      .group
+        = link_to '#' do
+          .group__name
+            = group.name
+          .group__message
+            メッセージはまだありません。
+
           

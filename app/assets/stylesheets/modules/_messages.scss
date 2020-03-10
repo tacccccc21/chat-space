@@ -50,21 +50,24 @@
       }
     }
   }
-  &_group-box{
+  &__groups{
     height: 91px;
     font-weight: bold;
     color: #ffffff;
     position: fixed;
-    &_name{
+    &__group{
+   
+    &__name{
     font-size: 15px;
     width: 260px;
     margin: 20px 20px 5px 20px;
     }
-    &_message{
+    &__message{
       font-size: 11px;
       width: 260px;
       margin: 0 auto;
     }
+   }
   }
 }
 
