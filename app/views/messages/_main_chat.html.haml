@@ -14,11 +14,13 @@
       .main-chat__space__box__day
 
     .main-chat__space__hello
-      おはよう！
+      = render @messages
   .main-chat__message-form
     .main-chat__message-form__box
-      %input.placeholder{placeholder:"type a message", class:"main-chat__message-form__box__text" }
-      %label{class: "main-chat__message-form__box__icon"}
-        = icon('fas','image')
-        %input{type: "file", class:"main-chat__message-form__box__icon__file"}
-    %input{:type=>"submit", :name=>"commit", :class=>"main-chat__message-form__send"}
+      = form_for [@group, @message] do |f|
+        = f.text_field :content, class: 'main-chat__message-form__box', placeholder: 'type a message'
+        .main-chat__message-form__box__text
+          = f.label :image, class: 'main-chat__message-form__box__icon' do
+            = icon('fas', 'image', class: 'icon')
+            = f.file_field :image, class: 'hidden'
+        = f.submit 'Send', class: 'form__submit'

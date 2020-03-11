@@ -6,8 +6,7 @@
 .wrapper {
   height: 100vh;
   width: 100vw;
- 
- display: flex;
+  display: flex;
 }
 
 .side-bar {
@@ -56,28 +55,30 @@
     color: #ffffff;
     position: fixed;
     &__group{
-   
+    margin-left: 20px;
+      a{color: white;
+        text-decoration: none;}
     &__name{
     font-size: 15px;
     width: 260px;
-    margin: 20px 20px 5px 20px;
+    margin: 20px 20px 5px 0;
     }
     &__message{
       font-size: 11px;
       width: 260px;
-      margin: 0 auto;
+      
     }
    }
   }
 }
 
 
-.main-chat {
+.main-chat{
+  
   height: 100vh;
   width: calc(100vw - 300px);
   background-color: #fafafa;
   position: relative;
-  
   &_group-info{
     height: 100px;
     background-color: #ffffff;
@@ -134,9 +135,7 @@
       color: #434A54;
       margin: 12px 0 46px 0;
     }
-  
   }
-
   &__message-form{
     height: 90px;
     background-color: #d2d2d2;
@@ -164,17 +163,15 @@
     &__file{
       display: none;
     }
-    }
-    }
+  }
+}
     &__send{
       margin: 20px 40px 0 15px;
       padding: 0 30px;
       background-color: #38aef0;
       color: white;
       height: 50px;
-      
       border: solid 1px rgb(216,216,216);
     }
   }
 }
-
