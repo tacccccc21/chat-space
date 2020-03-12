@@ -1,26 +1,25 @@
 .main-chat
   .main-chat_group-info
     .main-chat_group-info_test
-      test
+      dddd
       .main-chat_group-info_test_menber
-        Menber: masa
+        Menber:  
+        %ul
+          - @group.users.each do |user|
+            %li= user.name
     .main-chat_group-info_edit
       = link_to "#" do
         Edit
+  
   .main-chat__space
-    .main-chat__space__box
-      .main-chat__space__box__name
-        masa
-      .main-chat__space__box__day
+    = render @messages
 
-    .main-chat__space__hello
-      = render @messages
   .main-chat__message-form
     .main-chat__message-form__box
       = form_for [@group, @message] do |f|
-        = f.text_field :content, class: 'main-chat__message-form__box', placeholder: 'type a message'
-        .main-chat__message-form__box__text
-          = f.label :image, class: 'main-chat__message-form__box__icon' do
-            = icon('fas', 'image', class: 'icon')
-            = f.file_field :image, class: 'hidden'
+        = f.text_field :content, class: 'main-chat__message-form__box__text', placeholder: 'type a message'
+        
+        = f.label :image, class: 'icon' do
+          = icon('fas', 'image', class: 'icon')
+          = f.file_field :image, class: 'hidden'
         = f.submit 'Send', class: 'form__submit'
