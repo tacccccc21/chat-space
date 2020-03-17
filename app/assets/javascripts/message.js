@@ -3,7 +3,7 @@ $(function(){
     if ( message.image ) {
       var html =
        `<div class="message-box">
-       <div class="main-chat__space">
+       
           <div class="main-chat__space__box">
             <div class="main-chat__space__box__name">
               ${message.user_name}
@@ -18,13 +18,13 @@ $(function(){
             </p>
           </div>
           <img src=${message.image} >
-        </div>
+        
       </div>`
       return html;
     } else {
       var html =
        `<div class="message-box">
-       <div class="main-chat__space">
+      
           <div class="main-chat__space__box">
             <div class="main-chat__space__box__name">
               ${message.user_name}
@@ -38,7 +38,7 @@ $(function(){
               ${message.content}
             </p>
           </div>
-        </div>
+        
        </div>`
       return html;
     };
@@ -54,13 +54,18 @@ $.ajax({
   data: formData,
   dataType: 'json',
   processData: false,
-  contentType: false
+  contentType: false,
+  
 })
   .done(function(data){
-   
     var html = buildHTML(data);
-    
-    
+    $('.main-chat__space').append(html);
+    $('.main-chat__space').animate({ scrollTop: $('.main-chat__space')[0].scrollHeight});
+    $('form')[0].reset();
+    $('.form__submit').prop('disabled', false);
   })
+  .fail(function() {
+    alert("メッセージ送信に失敗しました");
+});
 })
 })
