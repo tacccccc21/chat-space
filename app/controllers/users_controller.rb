@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-=======
+
 
   def index
     return nil if params[:keyword] == ""
@@ -13,9 +13,8 @@ class UsersController < ApplicationController
 
 
 
->>>>>>> df3f240efea16e80bf15427370c0471f29f8fcf3
-  def edit
 
+  def edit
 
   end
 
