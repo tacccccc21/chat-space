@@ -166,14 +166,16 @@
     position: relative;
     display: flex;
     .new_message{
-      width: 1190px;
+      //width: 1190px;
+      width: 450px;
     }
     &__text{
     height: 50px;
     padding-left: 10px;
     color: #999999;
     border: none;
-    width: 1190px;
+    //width: 1190px;
+    width: 450px;
     }
     .icon{
     position: absolute;
