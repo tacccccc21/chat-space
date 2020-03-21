@@ -85,10 +85,10 @@
     border-bottom: 1px #eeeeee solid;
     display: flex;
     justify-content: space-between;
+    padding: 0 40px;
     &_test{
     color: #333333;
     font-size: 20px;
-    margin-left: 40px;
     padding-top: 35px;
     font-weight: bold;
     &_menber{
@@ -114,8 +114,9 @@
     line-height: 40px;
     padding-left: 20px;
     margin-top: 28px;
-    margin-right: 40px;
     border: solid 1px #38aef0;
+    position: absolute;
+    right: 40px;
     }
   }
   &__space{
@@ -152,25 +153,14 @@
   &__message-form{
     height: 90px;
     background-color: #d2d2d2;
-    //position: absolute;
-    //bottom: 0;
-    //width: 100%;
-    //display: flex;
-    //justify-content: space-between;
     padding: 20px 40px;
     .new_message{
       display: flex;
     }
     &__input{
-    //margin-top: 20px;
-    //height: 50px;
-    //margin-left: 40px;
-    //line-height: 50px;
     position: relative;
     display: flex;
     width: 100%;
-    //margin-right: 40px;
-    
     &__box__text{
       height: 50px;
       padding:0 40px 0 10px;
@@ -182,7 +172,7 @@
     .icon{
       position: absolute;
       right: 10px;
-      top: 8px; 
+      top: 10px; 
       font-size: 1.3rem;
      
     }
@@ -192,10 +182,8 @@
 
 }
     .form__submit{
-      //position: absolute;
       padding: 0 30px;
       margin-left: 15px;
-      //margin-right: 40px;
       background-color: #38aef0;
       color: white;
       height: 50px;
