@@ -13,5 +13,5 @@ CarrierWave.configure do |config|
   }
 
   config.fog_directory  = 'takuto-s3'
-  config.asset_host = 'https://s3-ap-northeast-1.amazonaws.com/takutos3'
+  config.asset_host = 'https://s3-ap-northeast-1.amazonaws.com/takuto-s3'
 end

@@ -8,6 +8,7 @@ set :application, 'chat-space'
 set :repo_url,  'git@github.com:tacccccc21/chat-space.git'
 
 # バージョンが変わっても共通で参照するディレクトリを指定
+set :linked_files, %w{ config/secrets.yml }
 set :linked_dirs, fetch(:linked_dirs, []).push('log', 'tmp/pids', 'tmp/cache', 'tmp/sockets', 'vendor/bundle', 'public/system', 'public/uploads')
 
 set :rbenv_type, :user
@@ -25,8 +26,8 @@ set :unicorn_config_path, -> { "#{current_path}/config/unicorn.rb" }
 set :keep_releases, 5
 
 
-
 set :linked_files, %w{ config/secrets.yml }
+
 
 # デプロイ処理が終わった後、Unicornを再起動するための記述
 after 'deploy:publishing', 'deploy:restart'
