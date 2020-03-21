@@ -15,11 +15,11 @@
     = render @messages
 
   .main-chat__message-form
-    .main-chat__message-form__box
-      = form_for [@group, @message] do |f|
-        = f.text_field :content, class: 'main-chat__message-form__box__text', placeholder: 'type a message'
+    = form_for [@group, @message] do |f|
+      .main-chat__message-form__input
+        = f.text_field :content, class: 'main-chat__message-form__input__box__text', placeholder: 'type a message'
         
         = f.label :image, class: 'icon' do
-          = icon('fas', 'image', class: 'icon')
+          = icon('fas', 'image', class: 'fa fa-image')
           = f.file_field :image, class: 'hidden'
-        = f.submit 'Send', class: 'form__submit'
+      = f.submit 'Send', class: 'form__submit'

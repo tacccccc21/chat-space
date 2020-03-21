@@ -152,42 +152,50 @@
   &__message-form{
     height: 90px;
     background-color: #d2d2d2;
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    
-    &__box{
-    margin-top: 20px;
-    height: 50px;
-    margin-left: 40px;
-    line-height: 50px;
+    //position: absolute;
+    //bottom: 0;
+    //width: 100%;
+    //display: flex;
+    //justify-content: space-between;
+    padding: 20px 40px;
+    .new_message{
+      display: flex;
+    }
+    &__input{
+    //margin-top: 20px;
+    //height: 50px;
+    //margin-left: 40px;
+    //line-height: 50px;
     position: relative;
     display: flex;
-    .new_message{
-    width: 1190px;
-    }
-    &__text{
-    height: 50px;
-    padding-left: 10px;
-    color: #999999;
-    border: none;
-    width: 1190px;
+    width: 100%;
+    //margin-right: 40px;
+    
+    &__box__text{
+      height: 50px;
+      padding:0 40px 0 10px;
+      color: #999999;
+      border-style: none;
+      width: 100%;
+      
     }
     .icon{
-    position: absolute;
-    right: 10px;
-    top: 8px; 
-  }
-  .hidden{
-    display: none;
-  }
+      position: absolute;
+      right: 10px;
+      top: 8px; 
+      font-size: 1.3rem;
+     
+    }
+    .hidden{
+      display: none;
+}
+
 }
     .form__submit{
-      position: absolute;
+      //position: absolute;
       padding: 0 30px;
       margin-left: 15px;
+      //margin-right: 40px;
       background-color: #38aef0;
       color: white;
       height: 50px;
