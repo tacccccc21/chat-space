@@ -129,7 +129,7 @@
     }
     &__box{
       display: flex; 
-      justify-content: space-between;
+      
       &__name{
         font-size: 16px;
         color:#333333;
@@ -138,7 +138,7 @@
       &__day{
         font-size: 12px;
         color: #999999;
-        padding-right: 40px;
+        padding-left: 10px;
       }
     }
     &__hello{
